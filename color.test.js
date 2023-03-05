@@ -19,3 +19,24 @@ import { styleColors } from './color.js';
     t.deepEqual(styleColors(color), [logLine]);
   });
 });
+
+test('color object', (t) => {
+  const data = {
+    primary: '#0f0',
+    otherData: 3,
+    validate: () => false,
+    secondary: 'rgb(78, 31, 40)',
+  };
+  t.deepEqual(styleColors(data), [
+    [
+      '%cprimary %c#0f0',
+      'font-size: 14px;',
+      'color:rgba(0, 0, 0, 0.87);background-color:#0f0;font-size: 14px;',
+    ],
+    [
+      '%csecondary %crgb(78, 31, 40)',
+      'font-size: 14px;',
+      'color:#fff;background-color:rgb(78, 31, 40);font-size: 14px;',
+    ],
+  ]);
+});
