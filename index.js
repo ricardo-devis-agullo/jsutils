@@ -1,4 +1,4 @@
-import Color from './color.js';
+import Color from 'color';
 
 function getContrastText(background) {
   const lightText = '#fff';
