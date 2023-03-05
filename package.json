@@ -5,7 +5,7 @@
   "type": "module",
   "main": "browser.js",
   "scripts": {
-    "build": "esbuild index.mjs --bundle --minify --outfile=./dist/index.js",
+    "build": "esbuild index.js --bundle --minify --outfile=./dist/index.js",
     "test": "ava"
   },
   "repository": {
